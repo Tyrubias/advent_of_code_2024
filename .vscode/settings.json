@@ -1,0 +1,28 @@
+{
+  "zig.path": "/opt/homebrew/bin/zig",
+  "zig.zls.path": "/Users/vsong/Downloads/zls/zig-out/bin/zls",
+  // All nested settings will only affect Zig files.
+  "[zig]": {
+    // Formatting with ZLS matches `zig fmt`.
+    // The Zig FAQ answers some questions about `zig fmt`:
+    // https://github.com/ziglang/zig/wiki/FAQ
+    //
+    // disable format-on-save
+    // "editor.formatOnSave": false,
+
+    // disable inlay hints
+    // "editor.inlayHints.enabled": "off",
+
+    // overwrite words when accepting completions
+    "editor.suggest.insertMode": "replace",
+    // The `foldingProviderModel` provides more accurate stick scroll scopes
+    "editor.stickyScroll.defaultModel": "foldingProviderModel",
+    "editor.codeActionsOnSave": {
+      // Run code actions that currently supports adding and removing discards.
+      // "source.fixAll": "explicit",
+      // Run code actions that sorts @import declarations.
+      // Available since ZLS `0.14.0-dev.188+2be424de5`
+      // "source.organizeImports": "explicit",
+    }
+  }
+}
