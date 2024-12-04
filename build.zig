@@ -30,6 +30,10 @@ pub fn build(b: *std.Build) void {
             .optimize = optimize,
         });
 
+        const options = b.addOptions();
+        options.addOption([5]u8, "day", day_str);
+        exe.root_module.addOptions("build_options", options);
+
         const build_step = b.addInstallArtifact(exe, .{});
         const build_step_name = comptime std.fmt.comptimePrint("{s}", .{day_str});
         const build_step_description = comptime std.fmt.comptimePrint("build solution for day {s}", .{day_str});

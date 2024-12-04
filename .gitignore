@@ -106,3 +106,6 @@ docgen_tmp/
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux,visualstudiocode,zig
 
 .zig-cache/
+
+src/inputs/*
+!src/inputs/.gitkeep
